@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.5.1">
+
+    <issue
+        id="RedundantLabel"
+        severity="Warning"
+        message="Redundant label can be removed"
+        category="Correctness"
+        priority="5"
+        summary="Redundant label on activity"
+        explanation="When an activity does not have a label attribute, it will use the one from the application tag. Since the application has already specified the same label, the label on this activity can be omitted."
+        errorLine1="                  android:label=&quot;@string/app_name&quot;"
+        errorLine2="                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml"
+            line="11"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of `compileSdkVersion` than 24 is available: 34"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compileSdkVersion 24"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build.gradle"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:support-v4 than 24.0.0 is available: 28.0.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="        implementation &apos;com.android.support:support-v4:24.0.0&apos;"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build.gradle"
+            line="22"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="LockedOrientationActivity"
+        severity="Warning"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices"
+        category="Correctness"
+        priority="4"
+        summary="Incompatible screenOrientation value"
+        explanation="The `&lt;activity>` element should not be locked to any orientation so that users can take advantage of the multi-window environments and larger screens available on Android. To fix the issue, consider declaring the corresponding activity element with `screenOrientation=&quot;unspecified&quot;`or `&quot;fullSensor&quot;` attribute."
+        url="https://developer.android.com/topic/arc/window-management"
+        urls="https://developer.android.com/topic/arc/window-management"
+        errorLine1="                  android:screenOrientation=&quot;portrait&quot;>"
+        errorLine2="                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml"
+            line="12"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        severity="Warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        category="Correctness"
+        priority="2"
+        summary="Using discouraged APIs"
+        explanation="Discouraged APIs are allowed and are not deprecated, but they may be unfit for common use (e.g. due to slow performance or subtle behavior)."
+        errorLine1="                  android:screenOrientation=&quot;portrait&quot;>"
+        errorLine2="                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml"
+            line="12"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="PermissionImpliesUnsupportedChromeOsHardware"
+        severity="Error"
+        message="Permission exists without corresponding hardware `&lt;uses-feature android:name=&quot;android.hardware.camera&quot; required=&quot;false&quot;>` tag"
+        category="Correctness:Chrome OS"
+        priority="3"
+        summary="Permission Implies Unsupported Chrome OS Hardware"
+        explanation="The `&lt;uses-permission>` element should not require a permission that implies an unsupported large screen hardware feature. Google Play assumes that certain hardware related permissions indicate that the underlying hardware features are required by default. To fix the issue, consider declaring the corresponding &lt;uses-feature> element with `required=&quot;false&quot;` attribute."
+        url="https://developer.android.com/topic/arc/manifest.html#implied-features"
+        urls="https://developer.android.com/topic/arc/manifest.html#implied-features"
+        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; />"
+        errorLine2="     ~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml"
+            line="6"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="IntentFilterExportedReceiver"
+        severity="Warning"
+        message="As of Android 12, `android:exported` must be set; use `true` to make the activity available to other apps, and `false` otherwise. For launcher activities, this should be set to `true`."
+        category="Security"
+        priority="5"
+        summary="Unspecified `android:exported` in manifest"
+        explanation="Apps targeting Android 12 and higher are required to specify an explicit value for `android:exported` when the corresponding component has an intent filter defined. Otherwise, installation will fail. Set it to `true` to make this activity accessible to other apps, and `false` to limit it to be used only by this app or the OS. For launch activities, this should be set to true; otherwise, the app will fail to launch.&#xA;&#xA;Previously, `android:exported` for components without any intent filters present used to default to `false`, and when intent filters were present, the default was `true`. Defaults which change value based on other values are confusing and lead to apps accidentally exporting components as a side-effect of adding intent filters. This is a security risk, and we have made this change to avoid introducing accidental vulnerabilities.&#xA;&#xA;While the default without intent filters remains unchanged, it is now required to explicitly specify a value when intent filters are present. Any app failing to meet this requirement will fail to install on any Android version after Android 11.&#xA;&#xA;We recommend setting `android:exported` to false (even on previous versions of Android prior to this requirement) unless you have a good reason to export a particular component."
+        url="https://goo.gle/IntentFilterExportedReceiver"
+        urls="https://goo.gle/IntentFilterExportedReceiver"
+        errorLine1="        &lt;activity android:name=&quot;MainActivity&quot;"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml"
+            line="10"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="MissingApplicationIcon"
+        severity="Warning"
+        message="Should explicitly set `android:icon`, there is no default"
+        category="Usability:Icons"
+        priority="5"
+        summary="Missing application icon"
+        explanation="You should set an icon for the application as whole because there is no default. This attribute must be set as a reference to a drawable resource containing the image (for example `@drawable/icon`)."
+        url="https://developer.android.com/studio/publish/preparing#publishing-configure"
+        urls="https://developer.android.com/studio/publish/preparing#publishing-configure"
+        errorLine1="    &lt;application android:label=&quot;@string/app_name&quot;>"
+        errorLine2="     ~~~~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml"
+            line="9"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;切换摄像头&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;切换摄像头&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\res\layout\main.xml"
+            line="16"
+            column="9"/>
+    </issue>
+
+</issues>

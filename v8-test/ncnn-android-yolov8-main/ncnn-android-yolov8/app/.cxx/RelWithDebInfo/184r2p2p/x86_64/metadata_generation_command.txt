@@ -1,0 +1,18 @@
+                        -HC:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\jni
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=24
+-DANDROID_PLATFORM=android-24
+-DANDROID_ABI=x86_64
+-DCMAKE_ANDROID_ARCH_ABI=x86_64
+-DANDROID_NDK=C:\Users\preju\AppData\Local\Android\Sdk\ndk\26.1.10909125
+-DCMAKE_ANDROID_NDK=C:\Users\preju\AppData\Local\Android\Sdk\ndk\26.1.10909125
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\preju\AppData\Local\Android\Sdk\ndk\26.1.10909125\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\preju\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\cxx\RelWithDebInfo\184r2p2p\obj\x86_64
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\cxx\RelWithDebInfo\184r2p2p\obj\x86_64
+-DCMAKE_BUILD_TYPE=RelWithDebInfo
+-BC:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\.cxx\RelWithDebInfo\184r2p2p\x86_64
+-GNinja
+                        Build command args: []
+                        Version: 2

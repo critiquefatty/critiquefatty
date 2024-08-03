@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app"
+    name=":app"
+    type="APP"
+    maven="ncnn-android-yolov8:app:unspecified"
+    agpVersion="8.5.1"
+    buildFolder="build"
+    bootClassPath="C:\Users\preju\AppData\Local\Android\Sdk\platforms\android-24\android.jar;C:\Users\preju\AppData\Local\Android\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-24"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

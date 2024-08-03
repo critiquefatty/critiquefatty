@@ -1,0 +1,3 @@
+ninja: Entering directory `C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\.cxx\Debug\2o2j525z\arm64-v8a'
+[1/2] Building CXX object CMakeFiles/yolov8ncnn.dir/yolo.cpp.o
+[2/2] Linking CXX shared library C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build\intermediates\cxx\Debug\2o2j525z\obj\arm64-v8a\libyolov8ncnn.so

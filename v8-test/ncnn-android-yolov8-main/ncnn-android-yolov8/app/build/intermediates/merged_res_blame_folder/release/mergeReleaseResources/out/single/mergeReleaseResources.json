@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.tencent.yolov8ncnn.app-release-4:/layout_main.xml.flat",
+        "source": "com.tencent.yolov8ncnn.app-main-5:/layout/main.xml"
+    }
+]

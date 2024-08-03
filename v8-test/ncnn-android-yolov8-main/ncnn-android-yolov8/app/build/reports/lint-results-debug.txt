@@ -1,0 +1,117 @@
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:11: Warning: Redundant label can be removed [RedundantLabel]
+                  android:label="@string/app_name"
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RedundantLabel":
+   When an activity does not have a label attribute, it will use the one from
+   the application tag. Since the application has already specified the same
+   label, the label on this activity can be omitted.
+
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build.gradle:4: Warning: A newer version of compileSdkVersion than 24 is available: 34 [GradleDependency]
+    compileSdkVersion 24
+    ~~~~~~~~~~~~~~~~~~~~
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\build.gradle:22: Warning: A newer version of com.android.support:support-v4 than 24.0.0 is available: 28.0.0 [GradleDependency]
+        implementation 'com.android.support:support-v4:24.0.0'
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:12: Warning: Expecting android:screenOrientation="unspecified" or "fullSensor" for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices [LockedOrientationActivity]
+                  android:screenOrientation="portrait">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "LockedOrientationActivity":
+   The <activity> element should not be locked to any orientation so that
+   users can take advantage of the multi-window environments and larger
+   screens available on Android. To fix the issue, consider declaring the
+   corresponding activity element with `screenOrientation="unspecified"or
+   "fullSensor"` attribute.
+
+   https://developer.android.com/topic/arc/window-management
+
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:12: Warning: Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed. [DiscouragedApi]
+                  android:screenOrientation="portrait">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedApi":
+   Discouraged APIs are allowed and are not deprecated, but they may be unfit
+   for common use (e.g. due to slow performance or subtle behavior).
+
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:6: Error: Permission exists without corresponding hardware <uses-feature android:name="android.hardware.camera" required="false"> tag [PermissionImpliesUnsupportedChromeOsHardware]
+    <uses-permission android:name="android.permission.CAMERA" />
+     ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "PermissionImpliesUnsupportedChromeOsHardware":
+   The <uses-permission> element should not require a permission that implies
+   an unsupported large screen hardware feature. Google Play assumes that
+   certain hardware related permissions indicate that the underlying hardware
+   features are required by default. To fix the issue, consider declaring the
+   corresponding <uses-feature> element with required="false" attribute.
+
+   https://developer.android.com/topic/arc/manifest.html#implied-features
+
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:10: Warning: As of Android 12, android:exported must be set; use true to make the activity available to other apps, and false otherwise. For launcher activities, this should be set to true. [IntentFilterExportedReceiver]
+        <activity android:name="MainActivity"
+         ~~~~~~~~
+
+   Explanation for issues of type "IntentFilterExportedReceiver":
+   Apps targeting Android 12 and higher are required to specify an explicit
+   value for android:exported when the corresponding component has an intent
+   filter defined. Otherwise, installation will fail. Set it to true to make
+   this activity accessible to other apps, and false to limit it to be used
+   only by this app or the OS. For launch activities, this should be set to
+   true; otherwise, the app will fail to launch.
+
+   Previously, android:exported for components without any intent filters
+   present used to default to false, and when intent filters were present, the
+   default was true. Defaults which change value based on other values are
+   confusing and lead to apps accidentally exporting components as a
+   side-effect of adding intent filters. This is a security risk, and we have
+   made this change to avoid introducing accidental vulnerabilities.
+
+   While the default without intent filters remains unchanged, it is now
+   required to explicitly specify a value when intent filters are present. Any
+   app failing to meet this requirement will fail to install on any Android
+   version after Android 11.
+
+   We recommend setting android:exported to false (even on previous versions
+   of Android prior to this requirement) unless you have a good reason to
+   export a particular component.
+
+   https://goo.gle/IntentFilterExportedReceiver
+
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\AndroidManifest.xml:9: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
+    <application android:label="@string/app_name">
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "MissingApplicationIcon":
+   You should set an icon for the application as whole because there is no
+   default. This attribute must be set as a reference to a drawable resource
+   containing the image (for example @drawable/icon).
+
+   https://developer.android.com/studio/publish/preparing#publishing-configure
+
+C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\src\main\res\layout\main.xml:16: Warning: Hardcoded string "切换摄像头", should use @string resource [HardcodedText]
+        android:text="切换摄像头" />
+        ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+1 errors, 8 warnings

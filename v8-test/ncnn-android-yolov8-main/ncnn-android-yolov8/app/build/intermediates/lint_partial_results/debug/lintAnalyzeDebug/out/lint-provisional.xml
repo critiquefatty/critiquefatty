@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.1" type="conditional_incidents">
+
+    <incident
+        id="IntentFilterExportedReceiver"
+        severity="warning"
+        message="As of Android 12, `android:exported` must be set; use `true` to make the activity available to other apps, and `false` otherwise. For launcher activities, this should be set to `true`.">
+        <fix-attribute
+            description="Set exported=&quot;true&quot;"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="exported"
+            value="true"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="10"
+            column="10"
+            startOffset="402"
+            endLine="10"
+            endColumn="18"
+            endOffset="410"/>
+    </incident>
+
+    <incident
+        id="PermissionImpliesUnsupportedChromeOsHardware"
+        severity="error"
+        message="Permission exists without corresponding hardware `&lt;uses-feature android:name=&quot;android.hardware.camera&quot; required=&quot;false&quot;>` tag">
+        <fix-data featureName="android.hardware.camera"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="6"
+            column="6"
+            startOffset="215"
+            endLine="6"
+            endColumn="21"
+            endOffset="230"/>
+        <map>
+            <condition library="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LockedOrientationActivity"
+        severity="warning"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices">
+        <fix-attribute
+            description="Set screenOrientation=&quot;fullSensor&quot;"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="screenOrientation"
+            value="fullSensor"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="12"
+            column="19"
+            startOffset="508"
+            endLine="12"
+            endColumn="55"
+            endOffset="544"/>
+        <map>
+            <condition library="false"/>
+        </map>
+    </incident>
+
+</incidents>

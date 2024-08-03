@@ -1,0 +1,3 @@
+C:/Users/preju/Desktop/Dachuan/v8-test/ncnn-android-yolov8-main/ncnn-android-yolov8/app/.cxx/Debug/2o2j525z/armeabi-v7a/CMakeFiles/yolov8ncnn.dir
+C:/Users/preju/Desktop/Dachuan/v8-test/ncnn-android-yolov8-main/ncnn-android-yolov8/app/.cxx/Debug/2o2j525z/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/preju/Desktop/Dachuan/v8-test/ncnn-android-yolov8-main/ncnn-android-yolov8/app/.cxx/Debug/2o2j525z/armeabi-v7a/CMakeFiles/rebuild_cache.dir

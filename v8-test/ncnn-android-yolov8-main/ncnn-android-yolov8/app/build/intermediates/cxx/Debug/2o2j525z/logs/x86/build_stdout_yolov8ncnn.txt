@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\preju\Desktop\Dachuan\v8-test\ncnn-android-yolov8-main\ncnn-android-yolov8\app\.cxx\Debug\2o2j525z\x86'
+ninja: no work to do.
